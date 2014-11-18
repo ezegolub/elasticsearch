@@ -30,7 +30,8 @@ WORKDIR /data
 RUN \
   cd /elasticsearch && \
   bin/plugin -i elasticsearch/marvel/latest && \
-  bin/plugin -i elasticsearch/elasticsearch-cloud-aws/2.4.0
+  bin/plugin -i elasticsearch/elasticsearch-cloud-aws/2.4.0 && \
+  bin/plugin -i elasticsearch/elasticsearch-lang-mvel/1.4.1
 
 # Define default command.
 CMD ["/elasticsearch/bin/elasticsearch"]
